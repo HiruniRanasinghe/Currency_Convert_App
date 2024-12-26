@@ -3,11 +3,28 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 export default function App() {
+
+  const [lkr, setLkr] = useState('');
+  const [usd, setUsd] = useState('');
+
+  const convertToUSD = () => {
+    const converted = (parseFloat(lkr) * conversionRate).toFixed(2);
+    setUsd(converted);
+  };
+
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Text style={styles.title}>LKR to USD Converter</Text>
+      <Text style={styles.label}>Enter amount in LKR:</Text>
+      <TextInput
+        style={styles.input}
+        keyboardType="numeric"
+        value={lkr}
+        onChangeText={setLkr}
+        placeholder="e.g., 1000"
+      />
+      </View>
   );
 }
 
