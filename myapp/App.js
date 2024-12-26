@@ -8,8 +8,8 @@ export default function App() {
   const [usd, setUsd] = useState('');
 
   const convertToUSD = () => {
-    const converted = (parseFloat(lkr) * conversionRate).toFixed(2);
-    setUsd(converted);
+    const convert = (parseFloat(lkr) * conversionRate).toFixed(2);
+    setUsd(convert);
   };
 
 
