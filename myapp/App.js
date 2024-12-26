@@ -27,7 +27,7 @@ export default function App() {
       />
 
     <Button title="Convert" onPress={convertToUSD} />
-    
+
       {usd ? (
         <Text style={styles.result}>
           USD Amount: ${usd}
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
     padding: 20,
     backgroundColor: '#f5f5f5',
   },
@@ -56,12 +57,25 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   input: {
+    width: '80%',
     height: 40,
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 20,
+    backgroundColor: '#fff',
+  },
+  button: {
+    backgroundColor: '#007bff',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   result: {
     marginTop: 20,
