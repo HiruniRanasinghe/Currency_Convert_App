@@ -24,6 +24,14 @@ export default function App() {
         onChangeText={setLkr}
         placeholder="e.g., 1000"
       />
+
+    <Button title="Convert" onPress={convertToUSD} />
+      {usd ? (
+        <Text style={styles.result}>
+          USD Amount: ${usd}
+        </Text>
+      ) : null}
+      
       </View>
   );
 }
