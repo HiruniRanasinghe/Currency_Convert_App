@@ -27,6 +27,7 @@ export default function App() {
       />
 
     <Button title="Convert" onPress={convertToUSD} />
+    
       {usd ? (
         <Text style={styles.result}>
           USD Amount: ${usd}
